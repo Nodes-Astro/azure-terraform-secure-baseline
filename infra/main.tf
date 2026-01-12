@@ -4,4 +4,5 @@ module "baseline" {
   workload_name = var.workload_name
   tenant_id     = var.tenant_id
   object_id     = var.object_id
+  tags          = var.tags
 }
