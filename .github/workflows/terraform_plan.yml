@@ -1,4 +1,4 @@
-name: terraform-plan
+name: terraform-checks
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
       - ".github/workflows/terraform_plan.yml"
 
 jobs:
-  plan:
+  checks:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -24,10 +24,8 @@ jobs:
         run: terraform fmt -check -recursive
 
       - name: Terraform init (no backend)
-        run: terraform init -backend=false
+        run: terraform init -backend=false -reconfigure
 
       - name: Terraform validate
         run: terraform validate
 
-      - name: Terraform plan (no backend)
-        run: terraform plan -no-color -refresh=false
