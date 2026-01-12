@@ -12,3 +12,4 @@ Terraform baseline on Azure with:
 cd bootstrap
 ./00-bootstrap-state.sh
 cp backend.hcl ../infra/backend.hcl
+
