@@ -133,7 +133,7 @@ terraform destroy
 - GitHub Actions as CI gatekeeper
 
 
-##👤 Author
+## 👤 Author
 
 Alperen Etlik
 
