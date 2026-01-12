@@ -17,3 +17,13 @@ variable "object_id" {
   type        = string
   description = "Your user object id (az ad signed-in-user show -> id)"
 }
+
+
+variable "tags" {
+  type = map(string)
+  default = {
+    project = "azure-terraform-secure-baseline"
+    owner   = "alperen"
+    env     = "dev"
+  }
+}
