@@ -1,0 +1,10 @@
+name: terraform-apply
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Apply is intentionally disabled until Azure OIDC is configured."
